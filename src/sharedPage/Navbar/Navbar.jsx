@@ -10,7 +10,7 @@ import { AuthContext } from '../../authProvider/AuthProvider';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const {user, logOut}= useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext)
 
 
   const handleLogOut = () => {
@@ -39,57 +39,49 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          {
-            user ? 
-            <li>
+          <li>
             <NavLink
               to='/alltoys'
               className={({ isActive }) => (isActive ? 'text-blue-300' : 'default')}
             >
               All Toys
             </NavLink>
+          </li>
+          {
+            user ?
+              <li>
+                <NavLink
+                  to='/mytoys'
+                  className={({ isActive }) => (isActive ? 'text-blue-300' : 'default')}
+                >
+                  My Toys
+                </NavLink>
               </li>
               : ''
           }
           {
-            user ? 
-            <li>
-            <NavLink
-              to='/mytoys'
-              className={({ isActive }) => (isActive ? 'text-blue-300' : 'default')}
-            >
-              My Toys
-            </NavLink>
+            user ?
+              <li>
+                <NavLink
+                  to='/addtoys'
+                  className={({ isActive }) => (isActive ? 'text-blue-300' : 'default')}
+                >
+                  Add a Toy
+                </NavLink>
               </li>
               : ''
           }
-          {
-            user ? 
-            <li>
-            <NavLink
-              to='/addtoys'
-              className={({ isActive }) => (isActive ? 'text-blue-300' : 'default')}
-            >
-              Add a Toy
-            </NavLink>
-              </li>
-              : ''
-          }
-          {
-            user ? 
-            <li>
+          <li>
             <NavLink
               to='/blog'
               className={({ isActive }) => (isActive ? 'text-blue-300' : 'default')}
             >
               Blog
             </NavLink>
-              </li>
-              : ''
-          }
+          </li>
           {
-              user ? <button  className={({ isActive }) => (isActive ? 'text-purple-500' : '')} onClick={handleLogOut}>LogOut</button>
-                :
+            user ? <button className={({ isActive }) => (isActive ? 'text-purple-500' : '')} onClick={handleLogOut}>LogOut</button>
+              :
               <li>
                 <NavLink
                   to='/login'
@@ -98,26 +90,26 @@ const Navbar = () => {
                   Login
                 </NavLink>
               </li>
-            }
+          }
           {
             user ? ''
               :
-            <li>
-            <NavLink
-              to='/register'
-              className={({ isActive }) => (isActive ? 'text-blue-300' : 'default')}
-            >
-              Register
-            </NavLink>
+              <li>
+                <NavLink
+                  to='/register'
+                  className={({ isActive }) => (isActive ? 'text-blue-300' : 'default')}
+                >
+                  Register
+                </NavLink>
               </li>
           }
-          {user  ? <li>
-              <NavLink
-                
-              >
-                <img className='w-12 h-12 rounded-full' title={user && user?.displayName} src={user && user?.photoURL} alt="Profile" />
-              </NavLink>
-            </li> : ''}
+          {user ? <li>
+            <NavLink
+
+            >
+              <img className='w-12 h-12 rounded-full' title={user && user?.displayName} src={user && user?.photoURL} alt="Profile" />
+            </NavLink>
+          </li> : ''}
         </ul>
         {/* Mobile Navbar Section */}
         <div className='lg:hidden'>
@@ -136,7 +128,7 @@ const Navbar = () => {
                 <div className='flex items-center justify-between mb-4'>
                   <div>
                     <Link to='/' className='inline-flex items-center'>
-                    <FaPlaneDeparture className='h-6 w-6 text-blue-500' />
+                      <FaPlaneDeparture className='h-6 w-6 text-blue-500' />
                       <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
                         Aeroplane Toy
                       </span>
@@ -169,22 +161,30 @@ const Navbar = () => {
                         All Toys
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to='/mytoys'
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                      >
-                        My Toys
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to='/addtoys'
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                      >
-                        Add a Toy
-                      </Link>
-                    </li>
+                    {
+                      user ?
+                        <li>
+                          <Link
+                            to='/mytoys'
+                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
+                          >
+                            My Toys
+                          </Link>
+                        </li>
+                        : ''
+                    }
+                    {
+                      user ?
+                        <li>
+                          <Link
+                            to='/addtoys'
+                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
+                          >
+                            Add a Toy
+                          </Link>
+                        </li>
+                        : ''
+                    }
                     <li>
                       <Link
                         to='/blog'
@@ -193,14 +193,37 @@ const Navbar = () => {
                         Blog
                       </Link>
                     </li>
-                    <li>
-                      <Link
+                    {user && user.email ? <button className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400' onClick={handleLogOut}>LogOut</button>
                         
-                        className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                      >
-                        <img src="Profile" alt="Profile" />
-                      </Link>
-                    </li>
+                      : <li>
+                        <Link
+                          to='/login'
+                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
+                        >
+                          Login
+                        </Link>
+                        </li>}
+                    {
+                      user ? ''
+
+                      : <li>
+                        <Link
+                          to='/register'
+                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
+                        >
+                          Register
+                        </Link>
+                      </li>}
+                    {
+                      user ?
+                        <li>
+                          <Link>
+                            <img className='w-12 h-12 rounded-full' title={user && user?.displayName} src={user && user.photoURL} alt="Profile" />
+                          </Link>
+                        </li>
+                        : ''
+                    }
+                    
                   </ul>
                 </nav>
               </div>

@@ -2,12 +2,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../sharedPage/Navbar/Navbar';
+import Footer from '../sharedPage/Footer/Footer';
 
 const Main = () => {
     return (
         <div className='md:w-[80%] w-full md:mx-auto'>
             <Navbar/>
-            <Outlet/>
+            <Outlet />
+            <Footer/>
         </div>
     );
 };

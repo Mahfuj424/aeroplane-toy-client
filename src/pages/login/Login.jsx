@@ -1,9 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { FiGithub } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
-import { updateProfile } from 'firebase/auth';
 import useTitle from '../../../Title/useTitle';
 import { AuthContext } from '../../authProvider/AuthProvider';
 
@@ -50,7 +48,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen mt-10">
+            <div className="hero min-h-screen mt-5">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold text-center">Please Login</h1>

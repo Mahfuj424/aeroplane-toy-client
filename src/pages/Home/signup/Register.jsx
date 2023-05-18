@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from '../../../authProvider/AuthProvider';
+import useTitle from '../../../../Title/useTitle';
 
 
 const Register = () => {
@@ -11,7 +12,7 @@ const Register = () => {
 
     const [error, setError] = useState('');
 
-
+    useTitle('register')
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -66,7 +67,7 @@ const Register = () => {
     
     return (
         <div>
-            <div className="hero min-h-screen mt-16">
+            <div className="hero min-h-screen mt-5">
                 <div className="hero-content flex-col">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold text-center">Please Register</h1>
