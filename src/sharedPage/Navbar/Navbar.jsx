@@ -24,7 +24,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <Link to='/' className='inline-flex items-center'>
           <FaPlaneDeparture className='h-6 w-6 text-blue-500' />
-          <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
+          <span className='ml-2 text-xl font-bold tracking-wide uppercase text-gray-800'>
             Aeroplane Toy
           </span>
         </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           {
-            user ? <button className={({ isActive }) => (isActive ? 'text-purple-500' : '')} onClick={handleLogOut}>LogOut</button>
+            user ? ''
               :
               <li>
                 <NavLink
@@ -103,11 +103,17 @@ const Navbar = () => {
                 </NavLink>
               </li>
           }
+        </ul>
+        <ul className='flex gap-4'>
+          {
+            user ? <button className='md:flex hidden md:mt-3' onClick={handleLogOut}>LogOut</button>
+              : ''
+          }
           {user ? <li>
             <NavLink
 
             >
-              <img className='w-12 h-12 rounded-full' title={user && user?.displayName} src={user && user?.photoURL} alt="Profile" />
+              <img className='w-12 md:flex hidden h-12 rounded-full' title={user && user?.displayName} src={user && user?.photoURL} alt="Profile" />
             </NavLink>
           </li> : ''}
         </ul>
@@ -194,7 +200,7 @@ const Navbar = () => {
                       </Link>
                     </li>
                     {user && user.email ? <button className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400' onClick={handleLogOut}>LogOut</button>
-                        
+
                       : <li>
                         <Link
                           to='/login'
@@ -202,18 +208,18 @@ const Navbar = () => {
                         >
                           Login
                         </Link>
-                        </li>}
+                      </li>}
                     {
                       user ? ''
 
-                      : <li>
-                        <Link
-                          to='/register'
-                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                        >
-                          Register
-                        </Link>
-                      </li>}
+                        : <li>
+                          <Link
+                            to='/register'
+                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
+                          >
+                            Register
+                          </Link>
+                        </li>}
                     {
                       user ?
                         <li>
@@ -223,7 +229,7 @@ const Navbar = () => {
                         </li>
                         : ''
                     }
-                    
+
                   </ul>
                 </nav>
               </div>

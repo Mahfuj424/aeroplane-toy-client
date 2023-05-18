@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.jpg'
 
 const Footer = () => {
     return (
@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="footer p-10 bg-base-200 text-base-content">
                 <div>
                     <img className='rounded-full w-1/2' src={logo} alt="" />
-                    <p>Aeroplane Toy <br /> ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                    <p className='text-lg'>Aeroplane Toy <br /> ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
                 </div>
                 <div>
                     <span className="footer-title">Services</span>
@@ -16,6 +16,7 @@ const Footer = () => {
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
+                    <a className="link link-hover">Development</a>
                 </div>
                 <div>
                     <span className="footer-title">Address</span>
@@ -23,12 +24,14 @@ const Footer = () => {
                     <a className="link link-hover">Contact</a>
                     <a className="link link-hover">Jobs</a>
                     <a className="link link-hover">Dhaka Gazipur 12 road</a>
+                    <a className="link link-hover">Mobile: 01334-433-546</a>
                 </div>
                 <div>
                     <span className="footer-title">Information</span>
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <a className="link link-hover">Create policy</a>
+                    <a className="link link-hover">All website</a>
                 </div>
                 <div>
                     <span className="footer-title">Social Media</span>
@@ -38,7 +41,7 @@ const Footer = () => {
                         </label>
                         <div className="relative">
                             <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" />
-                            <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
+                            <button className="btn btn-primary absolute text-xs top-0 right-0 rounded-l-none">Subscribe</button>
                         </div>
                     </div>
                     <div className="grid grid-flow-col gap-4 w-48 ml-3 mt-5">
