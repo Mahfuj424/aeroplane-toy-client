@@ -106,7 +106,7 @@ const Register = () => {
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
                             </div>
-                            <p>You have already account? <Link className='btn-link' to='/login'>Please Login</Link></p>
+                            <p>You have already an account? <Link className='btn-link' to='/login'>Please Login</Link></p>
                             <div>
                                 <button className='btn btn-outline w-full hover:bg-blue-700' onClick={handleGoogleUser}><span><FcGoogle/></span>Google</button>
                             </div>
