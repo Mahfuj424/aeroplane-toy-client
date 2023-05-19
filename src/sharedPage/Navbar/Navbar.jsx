@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <div className='bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
-      <div className='relative flex items-center justify-between'>
+      <div className='flex items-center justify-between'>
         {/* Logo Section */}
         <Link to='/' className='inline-flex items-center'>
           <FaPlaneDeparture className='h-6 w-6 text-blue-500' />
@@ -63,7 +63,7 @@ const Navbar = () => {
             user ?
               <li>
                 <NavLink
-                  to='/addtoys'
+                  to='/addToy'
                   className={({ isActive }) => (isActive ? 'text-blue-300' : 'default')}
                 >
                   Add a Toy
@@ -106,7 +106,7 @@ const Navbar = () => {
         </ul>
         <ul className='flex gap-4'>
           {
-            user ? <button className='md:flex hidden md:mt-3' onClick={handleLogOut}>LogOut</button>
+            user ? <button className='md:flex btn btn-warning font-bold btn-outline hidden' onClick={handleLogOut}>LogOut</button>
               : ''
           }
           {user ? <li>

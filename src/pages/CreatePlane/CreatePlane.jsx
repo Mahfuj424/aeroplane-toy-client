@@ -27,7 +27,7 @@ const CreatePlane = () => {
                             <input type="radio" name="rating-1" className="mask mask-star" />
                             <input type="radio" name="rating-1" className="mask mask-star" />
                         </div>
-                        <button className="btn btn-primary">Get Started</button>
+                        <button className="btn btn-warning">Get Started</button>
                     </div>
                 </div>
             </div>
