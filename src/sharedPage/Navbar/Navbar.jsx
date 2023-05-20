@@ -19,11 +19,11 @@ const Navbar = () => {
 
 
   return (
-    <div className='bg-gray-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
+    <div className='bg-green-100 px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
       <div className='flex items-center justify-between'>
         {/* Logo Section */}
         <Link to='/' className='inline-flex items-center'>
-          <FaPlaneDeparture className='h-6 w-6 text-blue-500' />
+          <FaPlaneDeparture className='h-8 w-8 text-green-300' />
           <span className='ml-2 text-xl font-bold tracking-wide uppercase text-gray-800'>
             Aeroplane Toy
           </span>
@@ -106,7 +106,7 @@ const Navbar = () => {
         </ul>
         <ul className='flex gap-4'>
           {
-            user ? <button className='md:flex btn btn-warning font-bold btn-outline hidden' onClick={handleLogOut}>LogOut</button>
+            user ? <button className='md:flex btn btn-success font-bold btn-outline hidden' onClick={handleLogOut}>LogOut</button>
               : ''
           }
           {user ? <li>

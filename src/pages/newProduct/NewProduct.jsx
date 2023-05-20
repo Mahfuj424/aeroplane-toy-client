@@ -9,8 +9,8 @@ import cardImage6 from '../../assets/gallery/card6.jpg'
 
 const NewProduct = () => {
     return (
-        <div className='bg-base-200 my-10 p-5'>
-            <h1 className='text-3xl font-semibold underline text-center uppercase'>new products</h1>
+        <div className='bg-green-100 my-10 p-5 rounded-xl'>
+            <h1 className='text-3xl font-semibold underline text-center uppercase'>latest products</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5 my-10'>
                 <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
                     <figure><img className='h-full rounded-xl p-3' src={cardImage1} alt="Shoes" /></figure>
@@ -18,7 +18,7 @@ const NewProduct = () => {
                         <h2 className="card-title">Shoes!</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
+                            <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ const NewProduct = () => {
                         <h2 className="card-title">Shoes!</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
+                            <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const NewProduct = () => {
                         <h2 className="card-title">Shoes!</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
+                            <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ const NewProduct = () => {
                         <h2 className="card-title">Shoes!</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
+                            <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ const NewProduct = () => {
                         <h2 className="card-title">Shoes!</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
+                            <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ const NewProduct = () => {
                         <h2 className="card-title">Shoes!</h2>
                         <p>If a dog chews shoes whose shoes does he choose?</p>
                         <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
+                            <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
                     </div>
                 </div>

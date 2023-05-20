@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "aos": "^2.3.4",
     "daisyui": "^2.51.6",
     "firebase": "^9.22.0",
     "localforage": "^1.10.0",
@@ -21,7 +22,8 @@
     "react-rating": "^2.0.5",
     "react-router-dom": "^6.11.2",
     "sort-by": "^1.2.0",
-    "sweetalert2": "^11.7.5"
+    "sweetalert2": "^11.7.5",
+    "swiper": "^9.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

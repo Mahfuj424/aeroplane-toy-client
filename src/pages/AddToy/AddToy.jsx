@@ -11,7 +11,7 @@ const AddToy = () => {
     const [toys, setToys]=useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/addToy')
+        fetch('https://aeroplane-toy-server.vercel.app/addToy')
             .then(res => res.json())
             .then(data => console.log(data))
     },[])
@@ -115,7 +115,7 @@ const AddToy = () => {
                     <textarea name="description" id="description" rows="4" cols="50"  className="border rounded py-2 px-3 w-full"></textarea>
                 </div>
                 <div className="mb-4 text-center">
-                    <button type="submit" className="btn btn-success">Add</button>
+                    <button type="submit" className="btn  btn-warning">Upload</button>
                 </div>
             </form>
         </div>

@@ -1,23 +1,22 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { BiEdit } from "react-icons/bi";
 import Swal from 'sweetalert2';
 import useTitle from '../../../Title/useTitle';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../authProvider/AuthProvider';
 
 const MyToys = () => {
+    const { user } = useContext(AuthContext)
 
     useTitle('My Toy')
 
     const [reload, setReload] = useState(false)
     const [toys, setToys] = useState([])
+    const [sortBy, setSortBy] = useState('')
 
-    useEffect(() => {
-        fetch('http://localhost:5000/allToy')
-            .then(res => res.json())
-            .then(data => setToys(data))
-    }, [reload])
+
 
 
     const handleDelete = (id) => {
@@ -51,9 +50,49 @@ const MyToys = () => {
         })
     }
 
+
+    useEffect(() => {
+        let apiUrl = `http://localhost:5000/myToy/${user?.email}`;
+        if (sortBy) {
+            apiUrl += `?sortBy=${sortBy}`;
+        }
+
+        fetch(apiUrl)
+            .then(res => res.json())
+            .then(data => {
+                const parsedData = data.map(toy => ({
+                    ...toy,
+                    price: parseInt(toy.price),
+                }));
+
+                if (sortBy === 'lower') {
+                    parsedData.sort((a, b) => b.price - a.price);
+                } else if (sortBy === 'higher') {
+                    parsedData.sort((a, b) => b.price - a.price);
+                }
+
+                setToys(parsedData)
+            })
+    }, [user, reload, sortBy])
+
+
+    const handleSortByChange = e => {
+        setSortBy(e.target.value)
+    }
+
+
     return (
         <div className='my-10'>
             <div className="overflow-x-auto">
+                <div className='flex justify-end mb-12'>
+                    <select value={sortBy} onChange={handleSortByChange}
+                        className='border-2 p-2 border-success'
+                    >
+                        <option value="">Sort By</option>
+                        <option value="lower">Lower Price</option>
+                        <option value="higher">Higher Price</option>
+                    </select>
+                </div>
                 <table className="table w-full">
                     {/* head */}
                     <thead>

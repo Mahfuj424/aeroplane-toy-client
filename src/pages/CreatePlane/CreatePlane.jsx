@@ -1,15 +1,27 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect } from 'react';
 import createPlane from '../../assets/gallery/createPlane.gif'
+import AOS from 'aos'
 
 const CreatePlane = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
-        <div className='bg-base-200 my-10 p-5'>
+        <div className='bg-green-100 my-10 p-5 rounded-xl'>
             <h1 className='text-center text-4xl font-semibold mt-5 underline'>How to Create a Aeroplane</h1>
             <div className="hero bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
-                    <img src={createPlane} className=" rounded-lg shadow-2xl" />
-                    <div>
+                    <div data-aos="fade-up-right"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
+                        <img src={createPlane} className=" rounded-lg shadow-2xl" />
+                    </div>
+                    <div data-aos="fade-up-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <h1 className="text-3xl font-bold">More Details</h1>
                         <ul className='py-6'>
                             <li>1. Balsa wood or lightweight cardboard</li>
@@ -27,7 +39,7 @@ const CreatePlane = () => {
                             <input type="radio" name="rating-1" className="mask mask-star" />
                             <input type="radio" name="rating-1" className="mask mask-star" />
                         </div>
-                        <button className="btn btn-warning">Get Started</button>
+                        <button className="btn btn-success">Get Started</button>
                     </div>
                 </div>
             </div>
