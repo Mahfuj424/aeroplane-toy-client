@@ -1,18 +1,37 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../../Title/useTitle';
 
 const AllToy = () => {
-    const toys = useLoaderData()
-    console.log(toys);
+    const [toys, setToys] = useState([])
+    
+
+    const [searchText, setSearchText]=useState('')
+    
+    useTitle('All Toys')
+
+    useEffect(() => {
+        fetch('http://localhost:5000/allToy')
+            .then(res => res.json())
+            .then(data => {
+            setToys(data)
+        })
+    },[])
 
 
-    const toyDetails = (id) => {
-        console.log(id);
-    }
+    const handleSearch = () => {
+        fetch(`http://localhost:5000/searchText?search=${searchText}`)
+            .then(res => res.json())
+            .then(data => setToys(data))
+    };
 
     return (
         <div className='my-10'>
+            <div className="form-control w-1/2 mx-auto mb-5">
+                <input onChange={(e)=> setSearchText(e.target.value)} type="text" placeholder="search" className="input input-bordered" />
+                <input onClick={handleSearch} className='btn btn-outline mx-auto mt-3 btn-warning w-[20%]' type="submit" value="Search" />
+            </div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     {/* head */}
@@ -29,7 +48,7 @@ const AllToy = () => {
                     </thead>
                     {
                         toys.map((toy, index) => {
-                            const {_id, sellerName, name, subcategory, quantity, price } = toy;
+                            const { _id, sellerName, name, subcategory, quantity, price } = toy;
                             return <tbody key={toy._id}>
                                 {/* row 1 */}
                                 <tr>

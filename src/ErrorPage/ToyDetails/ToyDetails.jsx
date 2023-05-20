@@ -3,9 +3,11 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Rating from 'react-rating';
 import { HiStar, HiOutlineStar } from "react-icons/hi";
+import useTitle from '../../../Title/useTitle';
 
 const ToyDetails = () => {
     const toyData = useLoaderData()
+    useTitle('Toy Details')
     const { id } = useParams();
     const singleToy = toyData && toyData.find(data => data._id == id)
 
