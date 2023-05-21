@@ -104,7 +104,7 @@ const UpdateToy = () => {
                     <textarea name="description" id="description" defaultValue={description} rows="4" cols="50" className="border rounded py-2 px-3 w-full"></textarea>
                 </div>
                 <div className="mb-4 text-center">
-                    <button type="submit" className="btn btn-success">Update</button>
+                    <button onClick={handleUpdateToy} type="submit" className="btn btn-success">Update</button>
                 </div>
             </form>
         </div>
