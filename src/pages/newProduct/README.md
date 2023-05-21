@@ -51,8 +51,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-Live Link: https://teal-begonia-bbb3c7.netlify.app/
+## Live Link: https://teal-begonia-bbb3c7.netlify.app/
 
-If you have any questions or want to get in touch, you can reach us at [contact@aeroplanetoys.com](mailto:contact@aeroplanetoys.com). You can also visit our website at [www.aeroplanetoys.com](https://www.aeroplanetoys.com) for more information.
+
 
 Thank you for visiting the Aeroplane Toys website!
