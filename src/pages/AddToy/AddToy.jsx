@@ -89,7 +89,7 @@ const AddToy = () => {
                             <label htmlFor="subcategory" className="block mb-2">Subcategory:</label>
                             <select name="subcategory" id="subcategory"  className="border rounded py-2 px-3 w-full">
                                 <option value="Military planes">Military planes</option>
-                                <option value="subcategory2">Airborne Aircraft</option>
+                                <option value="subcategory2">Passenger Plane</option>
                                 <option value="Fighter jets">Fighter jets</option>
                             </select>
                         </div>

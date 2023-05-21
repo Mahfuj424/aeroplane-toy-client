@@ -22,7 +22,7 @@ const CreatePlane = () => {
                     <div data-aos="fade-up-left"
                         data-aos-easing="ease-out-cubic"
                         data-aos-duration="2000">
-                        <h1 className="text-3xl font-bold">More Details</h1>
+                        <h1 className="text-xl font-bold">More Details</h1>
                         <ul className='py-6'>
                             <li>1. Balsa wood or lightweight cardboard</li>
                             <li>2. Craft knife or scissors</li>

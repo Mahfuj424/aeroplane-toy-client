@@ -4,6 +4,7 @@ import Carousel from '../Carousel/Carousel';
 import useTitle from '../../../../Title/useTitle';
 import CreatePlane from '../../CreatePlane/CreatePlane';
 import NewProduct from '../../newProduct/NewProduct';
+import PhotoGallery from '../../photoGallery/PhotoGallery';
 
 const Home = () => {
     useTitle('Home')
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
             <Carousel />
             <CreatePlane />
+            <PhotoGallery/>
             <NewProduct/>
         </div>
     );
