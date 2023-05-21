@@ -49,6 +49,7 @@ const CategoryTab = () => {
                 <div className='mt-10'>
                     <TabPanel className='grid md:grid-cols-3 gap-5 pb-16 md:gap-3 grid-cols-1'>
                         {
+                            
                             toyData.map(toy =>
                                 <div key={toy._id} className="card w-[355px] md:w-96 bg-base-100 shadow-xl"
                                     data-aos='fade-up'
