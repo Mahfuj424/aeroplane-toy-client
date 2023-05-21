@@ -30,7 +30,7 @@ const AllToy = () => {
         <div className='my-10'>
             <div className="form-control w-1/2 mx-auto mb-5">
                 <input onChange={(e)=> setSearchText(e.target.value)} type="text" placeholder="search" className="input input-bordered" />
-                <input onClick={handleSearch} className='btn btn-outline mx-auto mt-3 btn-warning w-[20%]' type="submit" value="Search" />
+                <input onClick={handleSearch} className='btn btn-outline mx-auto mt-3 btn-success w-[20%]' type="submit" value="Search" />
             </div>
             <div className="overflow-x-auto">
                 <table className="table w-full">
@@ -59,7 +59,7 @@ const AllToy = () => {
                                     <td>{quantity}</td>
                                     <td>{price}</td>
                                     <Link to={`/toyDetails/${_id}`}>
-                                        <button className='btn btn-outline btn-warning'>Details</button>
+                                        <button className='btn btn-outline btn-success'>Details</button>
                                     </Link>
                                 </tr>
                             </tbody>

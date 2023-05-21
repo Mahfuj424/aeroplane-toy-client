@@ -15,7 +15,7 @@ const ToyDetails = () => {
     return (
         <div>
             <h1 className='text-3xl text-center mt-5'>Toy Details</h1>
-            <div className="hero min-h-screen rounded-xl shadow-xl bg-gray-200 my-10">
+            <div className="hero min-h-screen rounded-xl shadow-xl bg-green-100 my-10">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={image} className="w-[40%] rounded-lg shadow-2xl" alt='Toy Image' />
                     <div className='w-[60%] flex-col gap-3 pl-5'>

@@ -12,6 +12,7 @@ import ToyDetails from '../ErrorPage/ToyDetails/ToyDetails';
 import MyToys from '../pages/myToys/MyToys';
 import UpdateToy from '../pages/UpdateToy/UpdateToy';
 import PrivetRoute from '../pages/privetRoute/PrivetRoute';
+import Blog from '../pages/Blog/Blog';
 
 const Router = createBrowserRouter([
     {
@@ -53,7 +54,12 @@ const Router = createBrowserRouter([
                 element: <UpdateToy />,
                 loader: ({params})=> fetch(`http://localhost:5000/updateToy/${params.id}`)
                 
+            },
+            {
+                path: 'blog',
+                element: <Blog/>
             }
+
         ]
     },
 ]);

@@ -7,6 +7,7 @@ import {
 } from '@heroicons/react/24/solid'
 import { FaPlaneDeparture } from "react-icons/fa";
 import { AuthContext } from '../../authProvider/AuthProvider';
+import { HiOutlineLogout } from "react-icons/hi";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -104,9 +105,9 @@ const Navbar = () => {
               </li>
           }
         </ul>
-        <ul className='flex gap-4'>
+        <ul className='flex flex-row-reverse gap-4'>
           {
-            user ? <button className='md:flex btn btn-success font-bold btn-outline hidden' onClick={handleLogOut}>LogOut</button>
+            user ? <button className='md:flex btn btn-success font-bold btn-outline hidden' onClick={handleLogOut}>LogOut<HiOutlineLogout className='font-bold text-xl'/></button>
               : ''
           }
           {user ? <li>

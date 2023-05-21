@@ -5,15 +5,20 @@ import useTitle from '../../../../Title/useTitle';
 import CreatePlane from '../../CreatePlane/CreatePlane';
 import NewProduct from '../../newProduct/NewProduct';
 import PhotoGallery from '../../photoGallery/PhotoGallery';
+import CategoryTab from '../../SubCategoryTab/CategoryTab';
+import Blog from '../../Blog/Blog';
+import Testimonial from '../../UserReview/Testimonial';
 
 const Home = () => {
     useTitle('Home')
     return (
         <div>
             <Carousel />
-            <CreatePlane />
             <PhotoGallery/>
-            <NewProduct/>
+            <NewProduct />
+            <CategoryTab/>
+            <Testimonial/>
+            <CreatePlane />
         </div>
     );
 };

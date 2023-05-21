@@ -15,8 +15,8 @@ const NewProduct = () => {
                 <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
                     <figure><img className='h-full rounded-xl p-3' src={cardImage1} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">Passenger Plane</h2>
+                        <p>The toy plane features a sleek and aerodynamic design, mimicking the real-life counterparts. It may have realistic details such as wings, fuselage, landing gear, propellers, and cockpit</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
@@ -25,8 +25,8 @@ const NewProduct = () => {
                 <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
                     <figure><img className='h-full rounded-xl p-3' src={cardImage2} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">Military Plane</h2>
+                        <p>The toy plane features a sleek and aerodynamic design, mimicking the real-life counterparts. It may have realistic details such as wings, fuselage, landing gear, propellers, and cockpit</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
@@ -35,8 +35,8 @@ const NewProduct = () => {
                 <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
                     <figure><img className='h-full w-full rounded-2xl p-3' src={cardImage3} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">Passenger Plane</h2>
+                        <p>The toy plane features a sleek and aerodynamic design, mimicking the real-life counterparts. It may have realistic details such as wings, fuselage, landing gear, propellers, and cockpit</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
@@ -45,8 +45,8 @@ const NewProduct = () => {
                 <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
                     <figure><img className='h-full rounded-xl p-3' src={cardImage4} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">Military Plane</h2>
+                        <p>The toy plane features a sleek and aerodynamic design, mimicking the real-life counterparts. It may have realistic details such as wings, fuselage, landing gear, propellers, and cockpit</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
@@ -55,8 +55,8 @@ const NewProduct = () => {
                 <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
                     <figure><img src={cardImage5} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">Passenger Plane</h2>
+                        <p>The toy plane features a sleek and aerodynamic design, mimicking the real-life counterparts. It may have realistic details such as wings, fuselage, landing gear, propellers, and cockpit</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>
@@ -65,8 +65,8 @@ const NewProduct = () => {
                 <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
                     <figure><img src={cardImage6} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 className="card-title">Fighter jet</h2>
+                        <p>The toy plane features a sleek and aerodynamic design, mimicking the real-life counterparts. It may have realistic details such as wings, fuselage, landing gear, propellers, and cockpit</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-outline btn-success">Buy Now</button>
                         </div>

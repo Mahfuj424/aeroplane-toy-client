@@ -61,7 +61,7 @@ const AddToy = () => {
             {
                 toys.map(toy=> <AllToy key={toy._id} toy={toy}></AllToy>)
             }
-            <form onSubmit={handleSubmit} className='bg-gray-200 my-10 p-5 rounded-xl shadow-md'>
+            <form onSubmit={handleSubmit} className='bg-green-100 my-10 p-5 rounded-xl shadow-md'>
                 <div className="flex w-full gap-5 mx-auto ">
                     <div className='w-1/2'>
                         <div className="mb-4 ">
@@ -89,7 +89,7 @@ const AddToy = () => {
                             <label htmlFor="subcategory" className="block mb-2">Subcategory:</label>
                             <select name="subcategory" id="subcategory"  className="border rounded py-2 px-3 w-full">
                                 <option value="Military planes">Military planes</option>
-                                <option value="subcategory2">Passenger Plane</option>
+                                <option value="passenger palne">Passenger Plane</option>
                                 <option value="Fighter jets">Fighter jets</option>
                             </select>
                         </div>
@@ -115,7 +115,7 @@ const AddToy = () => {
                     <textarea name="description" id="description" rows="4" cols="50"  className="border rounded py-2 px-3 w-full"></textarea>
                 </div>
                 <div className="mb-4 text-center">
-                    <button type="submit" className="btn  btn-warning">Upload</button>
+                    <button type="submit" className="btn  btn-success">Upload</button>
                 </div>
             </form>
         </div>

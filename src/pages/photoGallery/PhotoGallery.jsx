@@ -13,6 +13,8 @@ import toy10 from '../../assets/gallery/toy10.jpg'
 import toy11 from '../../assets/gallery/toy11.jpg'
 import toy12 from '../../assets/gallery/toy12.jpg'
 
+import './styles.css'
+
 const photos = [
     {
         id: 1,
@@ -20,22 +22,22 @@ const photos = [
         name: "passenger plane"
     },
     {
-        id: 1,
+        id: 2,
         url: toy2,
-        name: "Fighter Jet"
+        name: "passenger plane"
     },
     {
-        id: 1,
+        id: 3,
         url: toy3,
-        name: "Military Plane"
+        name: "passenger plane"
     },
     {
-        id: 1,
+        id: 4,
         url: toy4,
         name: "passenger plane"
     },
     {
-        id: 1,
+        id: 5,
         url: toy5,
         name: "Fighter Jet"
     },
@@ -62,12 +64,12 @@ const photos = [
     {
         id: 10,
         url: toy10,
-        name: "Passenger Plane"
+        name: "Military Plane"
     },
     {
         id: 11,
         url: toy11,
-        name: "Fighter Jet"
+        name: "Passenger Plane"
     },
     {
         id: 12,
@@ -78,11 +80,11 @@ const photos = [
 
 const PhotoGallery = () => {
     return (
-        <div className='bg-green-100 p-5'>
+        <div className='bg-green-100 p-5 my-10 rounded-xl'>
             <h1 className='text-3xl font-bold text-center pb-3'><span className='text-green-500'>Photo</span> Gallery</h1>
             <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {photos.map((photo) => (
-                    <div key={photo.id} className="relative"
+                    <div key={photo.id} className="relative card-hover"
                     >
                         <img
                             data-aos="zoom-out"
@@ -90,10 +92,10 @@ const PhotoGallery = () => {
                             data-aos-duration="2000"
                             src={photo.url}
                             alt={photo.name}
-                            className={`object-cover shadow-xl rounded-xl w-full h-full`}
+                            className={`object-cover shadow-xl relative rounded-xl w-full h-full`}
                         />
-                        <div className="absolute bottom-0 left-0 right-0 p-2 bg-gray-800 text-white text-sm opacity-0 transition-opacity duration-300">
-                            {photo.name}
+                        <div className="absolute top-2 left-20 right-5 p-2  font-bold text-black text-xl transition-opacity duration-300">
+                            <h3 className='opacity-0'>{photo.name}</h3>
                         </div>
                     </div>
                 ))}
@@ -101,15 +103,5 @@ const PhotoGallery = () => {
         </div>
     );
 };
-
-// PhotoGallery.propTypes = {
-//     photos: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             id: PropTypes.number.isRequired,
-//             url: PropTypes.string.isRequired,
-//             name: PropTypes.string.isRequired,
-//         })
-//     ).isRequired,
-// };
 
 export default PhotoGallery;
