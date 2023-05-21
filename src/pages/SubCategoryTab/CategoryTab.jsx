@@ -24,25 +24,15 @@ const CategoryTab = () => {
 
     console.log(user);
     const handleToyDetails = (id) => {
-        console.log(id);
-        if (!user) {
-            Swal.fire({
-                title: ' you are not  Logged In ',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    navigate('/login')
-                }
-                
-            })
+
+        if (!user?.email) {
+            Swal.fire(
+                'You Are Now LogIn Page',
+                'That thing is still around?',
+                'success'
+            )
         }
-        // console.log();
-      
+
     }
 
 
@@ -60,7 +50,9 @@ const CategoryTab = () => {
                     <TabPanel className='grid md:grid-cols-3 gap-5 pb-16 md:gap-3 grid-cols-1'>
                         {
                             toyData.map(toy =>
-                                <div key={toy._id} className="card w-[355px] md:w-96 bg-base-100 shadow-xl">
+                                <div key={toy._id} className="card w-[355px] md:w-96 bg-base-100 shadow-xl"
+                                    data-aos='fade-up'
+                                >
                                     <figure className="px-10 pt-10">
                                         <img src={toy.image} alt="Military Planes" className="rounded-xl" />
                                     </figure>
@@ -76,7 +68,9 @@ const CategoryTab = () => {
                                             fullSymbol={<HiStar />}
                                         />
                                         <div className="card-actions">
-                                            <button onClick={() => handleToyDetails(toy._id)} className="btn btn-primary">View Details</button>
+                                            <Link to={`/toyDetails/${toy._id}`}>
+                                                <button onClick={handleToyDetails} className="btn btn-primary">View Details</button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>

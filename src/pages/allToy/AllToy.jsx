@@ -34,25 +34,13 @@ const AllToy = () => {
 
 
     const handleToyDetails = (id) => {
-        console.log(id);
-        if (!user) {
-            Swal.fire({
-                title: 'You are Not Logged In',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    navigate('/login')
-                }
-
-            })
-        }
-        else {
-            navigate(`/toyDetails/${id}`)
+       
+        if (!user?.email) {
+            Swal.fire(
+                'You Are Now LogIn Page',
+                'That thing is still around?',
+                'success'
+              )
         }
 
     }
@@ -89,8 +77,10 @@ const AllToy = () => {
                                         <td>{quantity}</td>
                                         <td>{price}</td>
 
-                                        <button onClick={()=>handleToyDetails(`${toy._id}`)} className='btn btn-outline btn-success'>Details</button>
-
+                                        
+                                        <Link to={`/toyDetails/${toy._id}`}>
+                                        <button onClick={handleToyDetails} className='btn btn-outline btn-success'>Details</button>
+                                        </Link>
                                     </tr>
                                 </tbody>
                             })

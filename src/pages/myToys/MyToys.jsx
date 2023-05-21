@@ -118,9 +118,11 @@ const MyToys = () => {
                                     <td>{subcategory}</td>
                                     <td>{quantity}</td>
                                     <td>{price}</td>
+                                    <td>
                                     <Link to={`/updateToy/${_id}`}>
-                                        <td className='cursor-pointer'><BiEdit /></td>
+                                        <p className='cursor-pointer'><BiEdit/> </p>
                                     </Link>
+                                    </td>
                                     <td onClick={() => handleDelete(_id)} className='cursor-pointer text-red-500 w-10'><RiDeleteBin6Fill /></td>
                                 </tr>
                             </tbody>

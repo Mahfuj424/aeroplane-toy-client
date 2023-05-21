@@ -184,7 +184,7 @@ const Navbar = () => {
                       user ?
                         <li>
                           <Link
-                            to='/addtoys'
+                            to='/addToy'
                             className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                           >
                             Add a Toy
