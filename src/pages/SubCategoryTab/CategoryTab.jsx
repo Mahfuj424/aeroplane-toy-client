@@ -22,17 +22,18 @@ const CategoryTab = () => {
             .then(data => setTabData(data))
     }, [tab])
 
-
+    console.log(user);
     const handleToyDetails = (id) => {
+        console.log(id);
         if (!user) {
             Swal.fire({
-                title: 'Are you ',
+                title: ' you are not  Logged In ',
                 text: "You won't be able to revert this!",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
+                confirmButtonText: 'Yes'
             }).then((result) => {
                 if (result.isConfirmed) {
                     navigate('/login')
@@ -40,9 +41,8 @@ const CategoryTab = () => {
                 
             })
         }
-        else {
-            navigate(`/toyDetails/${id}`)
-        }
+        // console.log();
+      
     }
 
 
@@ -66,7 +66,7 @@ const CategoryTab = () => {
                                     </figure>
                                     <div className="card-body ">
                                         <h2 className="card-title">{toy.name}</h2>
-                                        <p>{toy.price}</p>
+                                        <p>${toy.price}</p>
                                         <Rating
                                             className='text-yellow-500'
                                             readonly
@@ -89,11 +89,11 @@ const CategoryTab = () => {
                             toyData.map(toy =>
                                 <div key={toy._id} className="card w-[355px] md:w-96 bg-base-100 shadow-xl">
                                     <figure className="px-10 pt-10">
-                                        <img src={toy.image} alt="Passengers Planes" className="rounded-xl" />
+                                        <img src={toy.image} alt="Military Planes" className="rounded-xl" />
                                     </figure>
                                     <div className="card-body ">
                                         <h2 className="card-title">{toy.name}</h2>
-                                        <p>{toy.price}</p>
+                                        <p>${toy.price}</p>
                                         <Rating
                                             className='text-yellow-500'
                                             readonly
@@ -111,16 +111,16 @@ const CategoryTab = () => {
                         }
 
                     </TabPanel>
-                    <TabPanel className='grid md:grid-cols-3 grid-cols-1'>
+                    <TabPanel className='grid md:grid-cols-3 gap-5 pb-16 md:gap-3 grid-cols-1'>
                         {
                             toyData.map(toy =>
-                                <div key={toy._id} className="card w-96 bg-base-100 shadow-xl">
+                                <div key={toy._id} className="card w-[355px] md:w-96 bg-base-100 shadow-xl">
                                     <figure className="px-10 pt-10">
-                                        <img src={toy.image} alt="Fighter Jet" className="rounded-xl" />
+                                        <img src={toy.image} alt="Military Planes" className="rounded-xl" />
                                     </figure>
                                     <div className="card-body ">
                                         <h2 className="card-title">{toy.name}</h2>
-                                        <p>{toy.price}</p>
+                                        <p>${toy.price}</p>
                                         <Rating
                                             className='text-yellow-500'
                                             readonly
@@ -136,6 +136,7 @@ const CategoryTab = () => {
                                 </div>
                             )
                         }
+
                     </TabPanel>
                 </div>
             </Tabs>

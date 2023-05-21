@@ -37,7 +37,7 @@ const AllToy = () => {
         console.log(id);
         if (!user) {
             Swal.fire({
-                title: 'Are you sure?',
+                title: 'You are Not Logged In',
                 text: "You won't be able to revert this!",
                 icon: 'warning',
                 showCancelButton: true,
