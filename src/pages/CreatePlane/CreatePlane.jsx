@@ -14,7 +14,7 @@ const CreatePlane = () => {
             <h1 className='text-center text-4xl font-semibold my-5'>How to Create a <span className='text-green-500'>Aeroplane</span></h1>
             <div className="hero bg-green-100">
                 <div className="hero-content flex-col lg:flex-row">
-                    <div data-aos="fade-up-right"
+                    <div data-aos="fade-down"
                         data-aos-easing="ease-out-cubic"
                         data-aos-duration="2000">
                         <img src={createPlane} className=" rounded-lg shadow-2xl" />

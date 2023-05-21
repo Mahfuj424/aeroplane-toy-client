@@ -2,8 +2,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useTitle from '../../../Title/useTitle';
 
 const UpdateToy = () => {
+
+    useTitle('Update Toy')
+
     const updateToy = useLoaderData();
     console.log(updateToy);
     const { _id, image, name, sellerEmail, sellerName, subcategory, price, rating, quantity, description } = updateToy;
@@ -23,7 +27,7 @@ const UpdateToy = () => {
         console.log(image, name, sellerEmail, sellerName, subcategory, price, rating, quantity, description);
         const updatedToy = { image, name, sellerEmail, sellerName, subcategory, price, rating, quantity, description }
 
-        fetch(`http://localhost:5000/updateToy/${_id}`, {
+        fetch(`https://aeroplane-toy-server.vercel.app/updateToy/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

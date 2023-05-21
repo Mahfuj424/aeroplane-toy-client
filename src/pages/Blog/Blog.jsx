@@ -3,8 +3,14 @@ import React from 'react';
 import useTitle from '../../../Title/useTitle';
 
 const Blog = () => {
+
+    
     useTitle('blog')
+
+    
     return (
+
+
         <div className='my-20 space-y-12 bg-green-100 px-4 rounded-xl py-3 pb-5'>
             <h1 className='text-3xl text-center text-green-500 underline'>Question and Answer </h1>
             <div className='space-y-3 shadow-xl rounded-lg p-4 bg-white'>
@@ -37,6 +43,7 @@ const Blog = () => {
                 <h1 className='text-2xl font-semibold'>4. What is MongoDB aggregate and how does it work?</h1>
                 <p className='pl-3'>The MongoDB aggregation framework is a powerful tool for performing advanced data processing and analysis within the database. It works by using a pipeline of stages, each stage performing a specific operation on the data and passing the results to the next stage. The pipeline starts with a matching stage that filters the documents based on specified criteria. Then, the projection stage allows shaping the output by including or excluding fields or adding computed fields. The grouping stage groups documents together based on a key and performs aggregations within each group using operators like $sum, $avg, $max, and more. The sorting stage orders the documents, insights and perform advanced data analysis efficiently within MongoDB.</p>
             </div>
+
         </div>
     );
 };

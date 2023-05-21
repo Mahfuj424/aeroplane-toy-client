@@ -20,7 +20,6 @@ const MyToys = () => {
 
 
     const handleDelete = (id) => {
-        console.log(id);
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -32,7 +31,7 @@ const MyToys = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 //   
-                fetch(`http://localhost:5000/toy/${id}`, {
+                fetch(`https://aeroplane-toy-server.vercel.app/toy/${id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
@@ -52,7 +51,7 @@ const MyToys = () => {
 
 
     useEffect(() => {
-        let apiUrl = `http://localhost:5000/myToy/${user?.email}`;
+        let apiUrl = `https://aeroplane-toy-server.vercel.app/myToy/${user?.email}`;
         if (sortBy) {
             apiUrl += `?sortBy=${sortBy}`;
         }
@@ -66,7 +65,7 @@ const MyToys = () => {
                 }));
 
                 if (sortBy === 'lower') {
-                    parsedData.sort((a, b) => b.price - a.price);
+                    parsedData.sort((a, b) => a.price - b.price);
                 } else if (sortBy === 'higher') {
                     parsedData.sort((a, b) => b.price - a.price);
                 }

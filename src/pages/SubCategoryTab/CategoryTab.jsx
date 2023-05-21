@@ -1,23 +1,53 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import { HiStar, HiOutlineStar } from "react-icons/hi";
 import Rating from 'react-rating';
+import Swal from 'sweetalert2';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../authProvider/AuthProvider';
 
 const CategoryTab = () => {
+    const { user } = useContext(AuthContext)
 
     const [tab, setTab] = useState('Military planes')
     const [toyData, setTabData] = useState([])
+    const navigate = useNavigate()
+
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/categoryTab/${tab}`)
+        fetch(`https://aeroplane-toy-server.vercel.app/categoryTab/${tab}`)
             .then(res => res.json())
             .then(data => setTabData(data))
     }, [tab])
 
+
+    const handleToyDetails = (id) => {
+        if (!user) {
+            Swal.fire({
+                title: 'Are you ',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login')
+                }
+                
+            })
+        }
+        else {
+            navigate(`/toyDetails/${id}`)
+        }
+    }
+
+
     return (
-        <div className='my-10 bg-green-100 px-4'>
+        <div className='my-10 bg-green-100 rounded-xl px-4'>
             <h1 className='text-center text-3xl font-semibold pt-5 my-5'>Sub Category <span className='text-green-500'>Toy</span></h1>
             <Tabs>
                 <TabList className=' justify-center md:gap-5 md:flex'>
@@ -46,7 +76,7 @@ const CategoryTab = () => {
                                             fullSymbol={<HiStar />}
                                         />
                                         <div className="card-actions">
-                                            <button className="btn btn-primary">View Details</button>
+                                            <button onClick={() => handleToyDetails(toy._id)} className="btn btn-primary">View Details</button>
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +103,7 @@ const CategoryTab = () => {
                                             fullSymbol={<HiStar />}
                                         />
                                         <div className="card-actions">
-                                            <button className="btn btn-primary">View Details</button>
+                                            <button onClick={() => handleToyDetails(toy._id)} className="btn btn-primary">View Details</button>
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +130,7 @@ const CategoryTab = () => {
                                             fullSymbol={<HiStar />}
                                         />
                                         <div className="card-actions">
-                                            <button className="btn btn-primary">View Details</button>
+                                            <button onClick={() => handleToyDetails(toy._id)} className="btn btn-primary">View Details</button>
                                         </div>
                                     </div>
                                 </div>

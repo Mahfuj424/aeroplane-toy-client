@@ -43,7 +43,7 @@ const Router = createBrowserRouter([
             {
                 path: 'toyDetails/:id',
                 element: <PrivetRoute><ToyDetails /></PrivetRoute>,
-                loader: ()=> fetch(`http://localhost:5000/allToy`)
+                loader: ()=> fetch(`https://aeroplane-toy-server.vercel.app/allToy`)
             },
             {
                 path: 'myToys',
@@ -52,7 +52,7 @@ const Router = createBrowserRouter([
             {
                 path: 'updateToy/:id',
                 element: <UpdateToy />,
-                loader: ({params})=> fetch(`http://localhost:5000/updateToy/${params.id}`)
+                loader: ({params})=> fetch(`https://aeroplane-toy-server.vercel.app/updateToy/${params.id}`)
                 
             },
             {
