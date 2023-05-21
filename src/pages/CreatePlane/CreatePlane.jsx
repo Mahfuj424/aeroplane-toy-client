@@ -10,13 +10,11 @@ const CreatePlane = () => {
     }, [])
 
     return (
-        <div className='bg-green-100 my-10 p-5 rounded-xl'>
+        <div className='bg-green-100 my-20 p-5 rounded-xl'>
             <h1 className='text-center text-4xl font-semibold my-5'>How to Create a <span className='text-green-500'>Aeroplane</span></h1>
             <div className="hero bg-green-100">
                 <div className="hero-content flex-col lg:flex-row">
-                    <div data-aos="fade-down"
-                        data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000">
+                    <div data-aos="fade-down">
                         <img src={createPlane} className=" rounded-lg shadow-2xl" />
                     </div>
                     <div data-aos="fade-up-left"

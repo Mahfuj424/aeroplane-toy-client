@@ -12,7 +12,11 @@ const NewProduct = () => {
         <div className='bg-green-100 my-10 p-5 rounded-xl'>
             <h1 className='text-3xl font-semibold underline text-center uppercase'>latest products</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5 my-10'>
-                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
+                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl"
+                    data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="3000"
+                >
                     <figure><img className='h-full rounded-xl p-3' src={cardImage1} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Passenger Plane</h2>
@@ -22,7 +26,11 @@ const NewProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
+                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl"
+                    data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="3000"
+                >
                     <figure><img className='h-full rounded-xl p-3' src={cardImage2} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Military Plane</h2>
@@ -32,7 +40,11 @@ const NewProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
+                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl"
+                    data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="3000"
+                >
                     <figure><img className='h-full w-full rounded-2xl p-3' src={cardImage3} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Passenger Plane</h2>
@@ -42,7 +54,11 @@ const NewProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
+                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl"
+                    data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="3000"
+                >
                     <figure><img className='h-full rounded-xl p-3' src={cardImage4} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Military Plane</h2>
@@ -52,7 +68,11 @@ const NewProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
+                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl"
+                    data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="3000"
+                >
                     <figure><img src={cardImage5} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Passenger Plane</h2>
@@ -62,7 +82,11 @@ const NewProduct = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl">
+                <div className="card w-[350px] md:w-96 bg-base-100 shadow-xl"
+                    data-aos="fade-down"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="3000"
+                >
                     <figure><img src={cardImage6} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Fighter jet</h2>

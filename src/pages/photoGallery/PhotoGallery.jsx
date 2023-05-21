@@ -89,7 +89,7 @@ const PhotoGallery = () => {
                         <img
                             data-aos="zoom-out"
                             data-aos-easing="ease-out-cubic"
-                            data-aos-duration="2000"
+                            data-aos-duration="3000"
                             src={photo.url}
                             alt={photo.name}
                             className={`object-cover shadow-xl relative rounded-xl w-full h-full`}
